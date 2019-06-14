@@ -1,22 +1,22 @@
 import http from "k6/http";
-import { sleep, check } from "k6";
+import { check } from "k6";
 
 export let options = {
-  vus: 500,
-  duration: "5m",
-  rps: 1000,
+  vus: 300,
+  duration: "3m",
+  rps: 300,
 };
 
 const getRooms = (id) => {
-  return http.get(`http://localhost:1000/rooms/${id}/basicinfo`);
+  return http.get(`http://localhost:1000/api/rooms/${id}/basicinfo`);
 };
 
 const getBookings = (id) => {
-  return http.get(`http://localhost:1000/rooms/${id}/bookings`);
+  return http.get(`http://localhost:1000/api/rooms/${id}/bookings`);
 };
 
 const postBooking = (roomId) => {
-  const url = 'http://localhost:1000/bookings';
+  const url = 'http://localhost:1000/api/bookings';
   const payload = JSON.stringify({
     roomId,
     email: 'k6@gmail.com',
@@ -26,7 +26,9 @@ const postBooking = (roomId) => {
     checkin: '2019-06-12',
     checkout: '2019-06-13'
   });
-  var params = { headers: { 'Content-Type': 'application/json' } };
+  var params = {
+    headers: { 'Content-Type': 'application/json' },
+  };
   return http.post(url, payload, params);
 };
 

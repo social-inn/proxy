@@ -1,22 +1,21 @@
 # Project Name
 
-> Project description
+> Proxy server for Social Inn (Eugenia)
 
 ## Related Projects
 
-  - https://github.com/hacker-home/Airbnb-more-homes
-  - https://github.com/hacker-home/Airbnb-info
-  - https://github.com/hacker-home/Airbnb-reviews
-  - https://github.com/hacker-home/Airbnb-photos
+  - https://github.com/social-inn/bookings
 
 ## Usage
 
-> Proxy server for Hacker-home Airbnb FEC project
+> "npm install" to install dependencies
+> "npm start" to start server
+> visit "localhost:3000" on browser to view locally
 
 ## Requirements
+
 - Node 6.13.0
 - Google Chrome browser
-
 
 ### Installing Dependencies
 

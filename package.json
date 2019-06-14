@@ -1,26 +1,28 @@
 {
-  "name": "Airbnb-booking-proxy",
+  "name": "socialinn-proxy-eugenia",
   "version": "1.0.0",
-  "description": "> Project description",
+  "description": "Proxy server for Social Inn Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hacker-home/Airbnb-booking-proxy.git"
+    "url": "https://github.com/social-inn/socialinn-proxy-eugenia.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hacker-home/Airbnb-booking-proxy/issues"
+    "url": "https://github.com/social-inn/socialinn-proxy-eugenia/issues"
   },
-  "homepage": "https://github.com/hacker-home/Airbnb-booking-proxy#readme",
+  "homepage": "https://github.com/social-inn/socialinn-proxy-eugenia#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "http-proxy-middleware": "^0.19.1",
-    "nodemon": "^1.19.1"
+    "newrelic": "^5.10.0",
+    "nodemon": "^1.19.1",
+    "request": "^2.88.0"
   }
 }
