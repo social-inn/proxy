@@ -35,7 +35,7 @@ const postBooking = (roomId) => {
 export default function () {
   let res;
   const num = Math.random();
-  const id = Math.floor(Math.random() * 10000000);
+  const id = Math.ceil(Math.random() * 10000000);
   if (num < 0.45) {
     res = getRooms(id);
   } else if (num < 0.9) {
