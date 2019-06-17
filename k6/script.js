@@ -2,9 +2,9 @@ import http from "k6/http";
 import { check } from "k6";
 
 export let options = {
-  vus: 300,
-  duration: "3m",
-  rps: 300,
+  vus: 500,
+  duration: "30s",
+  rps: 500,
 };
 
 const getRooms = (id) => {
@@ -36,9 +36,9 @@ export default function () {
   let res;
   const num = Math.random();
   const id = Math.ceil(Math.random() * 10000000);
-  if (num < 0.45) {
+  if (num < 0.475) {
     res = getRooms(id);
-  } else if (num < 0.9) {
+  } else if (num < 0.95) {
     res = getBookings(id);
   } else {
     res = postBooking(id);
