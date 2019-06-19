@@ -4,8 +4,10 @@ const path = require('path');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const request = require('request');
+const compression = require('compression');
 
 const app = express();
+app.use(compression());
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, '../public')));
@@ -16,7 +18,7 @@ app.get('/rooms/:id', (req, res) => {
 
 app.get('/api/rooms/**', (req, res) => {
   request
-    .get(`http://localhost:3000${req.originalUrl}`, (err, response, body) => {
+    .get(`http://54.173.12.95${req.originalUrl}`, (err, response, body) => {
       if (err || !response) {
         res.sendStatus(404);
       } else {
@@ -28,7 +30,7 @@ app.get('/api/rooms/**', (req, res) => {
 app.post('/api/bookings', (req, res) => {
   request
     .post({
-      url: `http://localhost:3000${req.originalUrl}`,
+      url: `http://54.173.12.95:3000${req.originalUrl}`,
       method: 'POST',
       json: req.body,
     }, (err, response, body) => {
@@ -44,6 +46,6 @@ app.post('/api/bookings', (req, res) => {
     })
 });
 
-app.listen(1000, () => {
-  console.log('Social Inn proxy listening on port 1000');
+app.listen(2000, () => {
+  console.log('Social Inn proxy listening on port 2000');
 });
