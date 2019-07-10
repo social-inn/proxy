@@ -32,4 +32,4 @@ Note: Make sure to run microservices on individual servers before starting the p
 ## Related Projects
 
 - https://github.com/social-inn/bookings
-- https://github.com/social-inn/recommended-homes
+- https://github.com/social-inn/recommeded-homes
