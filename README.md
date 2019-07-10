@@ -1,33 +1,35 @@
-# Project Name
+# Social Inn Proxy
 
-> Proxy server for Social Inn (Eugenia)
+> Proxy server for Social Inn microservices
 
-## Related Projects
+## Table of Contents
 
-  - https://github.com/social-inn/bookings
+* [How To Use](#how-to-use)
+* [Requirements](#requirements)
+* [Related Projects](#related-projects)
 
-## Usage
+## How To Use
 
-> "npm install" to install dependencies
-> "npm start" to start server
-> visit "localhost:3000" on browser to view locally
+```bash
+# clone this repository
+$ git clone https://github.com/social-inn/proxy.git
+
+# install dependencies
+$ npm install
+
+# run the app!
+$ npm run start
+```
+
+Note: Make sure to run microservices on individual servers before starting the proxy server
 
 ## Requirements
 
-- Node 6.13.0
-- Google Chrome browser
+- [npm](http://npmjs.com)
+- [Node.js](https://nodejs.org/en/download/)
+- [Git](https://git-scm.com)
 
-### Installing Dependencies
+## Related Projects
 
-From within the root directory:
-
-```sh
-$ npm install
-```
-
-- git clone all related project
-- run all the local server of the related projects
-- build bundle.js with webpack for each modules
-- npm start (run proxy server)
-- open the browser with "localhost:3000"
-
+- https://github.com/social-inn/bookings
+- https://github.com/social-inn/recommended-homes
